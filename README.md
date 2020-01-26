@@ -1,9 +1,9 @@
 # unazed-s-basic-8080-disasm
 simple PoC disassembler for intel's 8080 isa
 
-requires python 3.8 or further, to backdate to previous versions reference line 83 (or thereabouts) in `unazed_disasm.py` using  the walrus operator `:=`, a very minor readjustment would be necessary to support the code across most 3.x versions, but i like using it.
+requires python 3.8 or further; to backdate to previous versions, reference line 83 (or thereabouts) in `unazed_disasm.py` using  the walrus operator `:=`, a very minor readjustment would be necessary to support the code across most 3.x versions, but i like using it, so it will remain.
 
-usage is simple, `python3 example.py` will invoke the disassembler over the predefined `example.com` 8080 binary, it's fairly simple code, change at ease. example output for the given `example.com` yields:
+usage is simple, `python3 example.py` will invoke the disassembler over the predefined `example.com` 8080 binary, it's fairly simple code, change at ease (the `org` parameter, usually). example output for the given `example.com` yields:
 
 ```py
 ┬─[spectaculum@unazed:/h/d/p/8080_disasm]─[04:49:15 PM]
