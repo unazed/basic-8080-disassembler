@@ -1,5 +1,4 @@
-# unazed-s-basic-8080-disasm
-simple PoC disassembler for intel's 8080 isa
+# 8080 disassembler
 
 requires python 3.8 or further; to backdate to previous versions, reference line 83 (or thereabouts) in `unazed_disasm.py` using  the walrus operator `:=`, a very minor readjustment would be necessary to support the code across most 3.x versions, but i like using it, so it will remain.
 
@@ -143,3 +142,7 @@ usage is simple, `python3 example.py` will invoke the disassembler over the pred
 ```
 
 considering it's a fairly simplistic implementation of a disassembler, there is no support for xrefs, string detection, logical chunking, control flow, etc., though it would be fairly simple to implement logical chunking by (optimally adding string detection first) creating a global address table, and adding any in-range addresses into it along the main-loop of `iterate_instructions`. thus you may distinguish different chunks of the code.
+
+there are most likely a multitude of issues with the disassembly code, however it seems to work for most simple code. there are interfaces and probable support for emulation as the `Disassembler.iterate_instructions` can be hooked to call instruction functions, passing a global `env` state variable (dictionary, most likely).
+
+though jumps may be awkward to implement, i have tried to code it in a way that is semi-modular. 
