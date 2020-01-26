@@ -5,7 +5,7 @@ requires python 3.8 or further; to backdate to previous versions, reference line
 
 usage is simple, `python3 example.py` will invoke the disassembler over the predefined `example.com` 8080 binary, it's fairly simple code, change at ease (the `org` parameter, usually). example output for the given `example.com` yields:
 
-```py
+```css
 ┬─[spectaculum@unazed:/h/d/p/8080_disasm]─[04:49:15 PM]
 ╰─>$ python example.py
 +0          c3  00 7c            JMP (0x007c)         ...  (reloc. -0x100) 
